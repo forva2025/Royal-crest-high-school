@@ -1,0 +1,397 @@
+:root {
+    --primary-blue: #1a365d;
+    --secondary-maroon: #800020;
+    --accent-gold: #d4af37;
+    --light-bg: #f8f9fa;
+    --dark-bg: #1a202c;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--light-bg);
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: #f0f0f0;
+}
+
+.dark-mode .bg-white {
+    background-color: #2d3748 !important;
+    color: #f0f0f0;
+}
+
+.dark-mode .text-gray-800 {
+    color: #f0f0f0 !important;
+}
+
+.dark-mode .bg-gray-100 {
+    background-color: #4a5568 !important;
+}
+
+.dark-mode .border-gray-200 {
+    border-color: #4a5568 !important;
+}
+
+.heading-font {
+    font-family: 'Playfair Display', serif;
+}
+
+.school-primary {
+    background-color: var(--primary-blue);
+}
+
+.school-secondary {
+    background-color: var(--secondary-maroon);
+}
+
+.school-accent {
+    color: var(--accent-gold);
+}
+
+.hero-section {
+    background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.8)), 
+                url('sch1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    min-height: 600px;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-gold);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.department-card {
+    perspective: 1000px;
+}
+
+.department-card-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.department-card:hover .department-card-inner {
+    transform: rotateY(180deg);
+}
+
+.department-card-front, .department-card-back {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.department-card-back {
+    transform: rotateY(180deg);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 2rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: var(--accent-gold);
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -0.5rem;
+    top: 0;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--secondary-maroon);
+    border: 2px solid var(--accent-gold);
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.slide-up {
+    animation: slideUp 0.7s ease-out;
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gallery-item {
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    z-index: 10;
+}
+
+.progress-step {
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+.progress-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 1.5rem;
+    background-color: #e2e8f0;
+}
+
+.progress-step.completed .step-number {
+    background-color: var(--accent-gold);
+    color: white;
+}
+
+.progress-step.active .step-number {
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content.active {
+    max-height: 500px;
+}
+
+.floating-btn {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.lazy-load {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.lazy-load.loaded {
+    opacity: 1;
+}
+
+/* Dark Mode Transitions */
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.dark-mode-transition {
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Dark Mode Toggle Animation */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.dark-mode-toggle-rotate {
+    animation: rotate 0.5s ease-in-out;
+}
+
+/* Dark Mode Specific Styles */
+.dark-mode .bg-white {
+    background-color: #1a202c !important;
+    transition: background-color 0.5s ease;
+}
+
+.dark-mode .text-gray-800 {
+    color: #f8fafc !important;
+    transition: color 0.5s ease;
+}
+
+.dark-mode .text-gray-600 {
+    color: #e2e8f0 !important;
+    transition: color 0.5s ease;
+}
+
+.dark-mode .text-gray-500 {
+    color: #cbd5e1 !important;
+    transition: color 0.5s ease;
+}
+
+.dark-mode .text-gray-400 {
+    color: #94a3b8 !important;
+    transition: color 0.5s ease;
+}
+
+.dark-mode .text-gray-300 {
+    color: #f1f5f9 !important;
+    transition: color 0.5s ease;
+}
+
+.dark-mode .bg-gray-100 {
+    background-color: #2d3748 !important;
+    transition: background-color 0.5s ease;
+}
+
+.dark-mode .border-gray-200 {
+    border-color: #4a5568 !important;
+    transition: border-color 0.5s ease;
+}
+
+.dark-mode .shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
+    transition: box-shadow 0.5s ease;
+}
+
+/* Dark Mode Navigation Styles */
+.dark-mode .nav-link {
+    color: #f1f5f9 !important;
+}
+
+.dark-mode .nav-link:hover {
+    color: #ffffff !important;
+}
+
+.dark-mode .nav-link::after {
+    background-color: var(--accent-gold);
+}
+
+/* Dark Mode Card Styles */
+.dark-mode .card-hover:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Mode Button Styles */
+.dark-mode .bg-blue-600 {
+    background-color: #3b82f6 !important;
+}
+
+.dark-mode .hover\:bg-blue-700:hover {
+    background-color: #2563eb !important;
+}
+
+/* Dark Mode Footer Styles */
+.dark-mode footer .text-gray-400 {
+    color: #cbd5e1 !important;
+}
+
+.dark-mode footer .hover\:text-white:hover {
+    color: #ffffff !important;
+}
+
+/* Dark Mode Form Styles */
+.dark-mode input::placeholder {
+    color: #94a3b8 !important;
+}
+
+.dark-mode input:focus {
+    border-color: #3b82f6 !important;
+}
+
+/* Premium Button Hover Effects */
+.premium-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.premium-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.premium-button:hover::after {
+    transform: translateX(100%);
+}
+
+/* Dark Mode Toggle Styles */
+#darkModeToggle, #mobileDarkModeToggle {
+    cursor: pointer;
+    outline: none;
+}
+
+#darkModeToggle:focus, #mobileDarkModeToggle:focus {
+    outline: none;
+}
+
+.dark-mode-toggle-rotate {
+    animation: rotate 0.5s ease-in-out;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+    }
+    
+    .department-card-inner {
+        transform: none !important;
+    }
+    
+    .department-card-front, .department-card-back {
+        position: relative;
+        backface-visibility: visible;
+    }
+    
+    .department-card-back {
+        transform: none;
+    }
+} 

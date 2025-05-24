@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Crest High School</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="sch_logo-removebg.png">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/256700000000" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg flex items-center justify-center hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-110 group">
+        <div class="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+        <i class="fab fa-whatsapp text-2xl"></i>
+        <span class="absolute -top-10 right-0 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+            Chat with us
+        </span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 bg-white shadow-md dark:bg-gray-800 transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="sch_logo-removebg.png" alt="School Crest" class="h-20 mr-4">
+                    <span class="heading-font text-3xl font-bold school-accent">ROYAL CREST</span>
+                    <span class="heading-font text-3xl font-bold">HIGH SCHOOL</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link py-2 px-1 school-accent font-medium">Home</a>
+                    <a href="#about" class="nav-link py-2 px-1 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">About</a>
+                    <a href="#admissions" class="nav-link py-2 px-1 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Admissions</a>
+                    <a href="#academics" class="nav-link py-2 px-1 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Academics</a>
+                    <a href="#academic-departments" class="nav-link py-2 px-1 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Departments</a>
+                    <a href="#location" class="nav-link py-2 px-1 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Contact</a>
+                    <!-- Dark Mode Toggle in Navigation -->
+                    <button id="darkModeToggle" class="relative group flex items-center">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg flex items-center justify-center hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-110">
+                            <div class="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                            <i class="fas fa-moon text-xl transform transition-transform duration-500" id="darkModeIcon"></i>
+                        </div>
+                        <span class="absolute -top-10 right-0 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                            Toggle Theme
+                        </span>
+                    </button>
+                </div>
+                
+                <div class="md:hidden flex items-center space-x-4">
+                    <!-- Dark Mode Toggle for Mobile -->
+                    <button id="mobileDarkModeToggle" class="relative group">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg flex items-center justify-center hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-110">
+                            <div class="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                            <i class="fas fa-moon text-xl transform transition-transform duration-500" id="mobileDarkModeIcon"></i>
+                        </div>
+                    </button>
+                    <button id="mobileMenuButton" class="text-gray-600 dark:text-gray-300 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg">
+            <div class="container mx-auto px-4 py-2">
+                <a href="#home" class="block py-2 px-1 school-accent font-medium">Home</a>
+                <a href="#about" class="block py-2 px-1 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">About</a>
+                <a href="#admissions" class="block py-2 px-1 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Admissions</a>
+                <a href="#academics" class="block py-2 px-1 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Academics</a>
+                <a href="#academic-departments" class="block py-2 px-1 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Departments</a>
+                <a href="#location" class="block py-2 px-1 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section flex items-center justify-center text-white relative overflow-hidden">
+        <div class="container mx-auto px-4 text-center slide-up">
+            <div class="max-w-4xl mx-auto">
+                <img src="sch_logo-removebg.png" alt="School Crest" class="mx-auto mb-8 h-48">
+                <h1 class="heading-font text-5xl md:text-6xl font-bold mb-4">ROYAL CREST HIGH SCHOOL</h1>
+                <p class="text-xl md:text-2xl mb-8">Excellence Through Knowledge and Integrity</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#admissions" class="bg-white text-gray-800 hover:bg-gray-100 font-medium py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        Apply Now
+                    </a>
+                    <a href="#about" class="border-2 border-white text-white hover:bg-white hover:text-gray-800 font-medium py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-0 left-0 right-0 flex justify-center pb-4">
+            <a href="#about" class="text-white animate-bounce">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="py-12 bg-gray-100 dark:bg-gray-700">
+        <div class="container mx-auto px-4">
+            <h2 class="heading-font text-3xl font-bold text-center mb-8">Latest News & Announcements</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- News Item 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden card-hover fade-in">
+                    <img src="sch1.jpg" alt="News Image" class="w-full h-48 object-cover lazy-load" loading="lazy">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-2">
+                            <span>June 15, 2023</span>
+                            <span class="mx-2">•</span>
+                            <span>Announcement</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">2023 Graduation Ceremony</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Join us for our annual graduation ceremony on July 20th at the school grounds. All parents and guardians are invited.</p>
+                        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- News Item 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden card-hover fade-in" style="animation-delay: 0.2s;">
+                    <img src="sch2.jpg" alt="News Image" class="w-full h-48 object-cover lazy-load" loading="lazy">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-2">
+                            <span>June 10, 2023</span>
+                            <span class="mx-2">•</span>
+                            <span>Academic</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Top UACE Performance</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Our students achieved outstanding results in the 2022 UACE exams, with 98% qualifying for university admission.</p>
+                        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- News Item 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden card-hover fade-in" style="animation-delay: 0.4s;">
+                    <img src="sch1.jpg" alt="News Image" class="w-full h-48 object-cover lazy-load" loading="lazy">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-2">
+                            <span>June 5, 2023</span>
+                            <span class="mx-2">•</span>
+                            <span>Sports</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Inter-School Football Victory</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Our football team emerged champions in the regional inter-school competition held last weekend.</p>
+                        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hidden News Items -->
+            <div id="moreNews" class="hidden mt-8 grid md:grid-cols-3 gap-6">
+                <!-- Additional News Item 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden card-hover fade-in">
+                    <img src="sch2.jpg" alt="News Image" class="w-full h-48 object-cover lazy-load" loading="lazy">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-2">
+                            <span>May 28, 2023</span>
+                            <span class="mx-2">•</span>
+                            <span>Academic</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Science Fair Success</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Our students won multiple awards at the National Science Fair with their innovative projects.</p>
+                        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Additional News Item 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden card-hover fade-in">
+                    <img src="sch1.jpg" alt="News Image" class="w-full h-48 object-cover lazy-load" loading="lazy">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-2">
+                            <span>May 20, 2023</span>
+                            <span class="mx-2">•</span>
+                            <span>Events</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Cultural Day Celebration</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Students showcased diverse cultural performances during our annual Cultural Day celebration.</p>
+                        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Additional News Item 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden card-hover fade-in">
+                    <img src="sch2.jpg" alt="News Image" class="w-full h-48 object-cover lazy-load" loading="lazy">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-2">
+                            <span>May 15, 2023</span>
+                            <span class="mx-2">•</span>
+                            <span>Academic</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">New Computer Lab</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">School inaugurates state-of-the-art computer laboratory with latest technology.</p>
+                        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <button id="viewAllNewsBtn" class="inline-block bg-gray-800 dark:bg-gray-600 text-white hover:bg-gray-700 dark:hover:bg-gray-500 font-medium py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                    View All News
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="py-12 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="heading-font text-3xl font-bold text-center mb-8">Quick Links</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#admissions" class="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg p-6 text-center transition-all duration-300 transform hover:scale-105">
+                    <div class="text-4xl mb-3 school-accent">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="font-bold">Admissions</h3>
+                </a>
+                
+                <a href="#academics" class="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg p-6 text-center transition-all duration-300 transform hover:scale-105">
+                    <div class="text-4xl mb-3 school-accent">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="font-bold">Academics</h3>
+                </a>
+                
+                <a href="#academic-departments" class="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg p-6 text-center transition-all duration-300 transform hover:scale-105">
+                    <div class="text-4xl mb-3 school-accent">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="font-bold">Departments</h3>
+                </a>
+                
+                <a href="#location" class="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg p-6 text-center transition-all duration-300 transform hover:scale-105">
+                    <div class="text-4xl mb-3 school-accent">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="font-bold">Contact Us</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-100 dark:bg-gray-700">
+        <div class="container mx-auto px-4">
+            <h2 class="heading-font text-3xl font-bold text-center mb-12">About Our School</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-8 mb-16">
+                <div class="lg:w-1/2">
+                    <h3 class="heading-font text-2xl font-bold mb-4 school-accent">Our History</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Founded in 1985, Royal Crest High School has grown from humble beginnings to become one of Uganda's premier educational institutions. 
+                        What started as a small community school with just 50 students has now flourished into a center of academic excellence with over 1,200 students.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Our commitment to holistic education has remained unchanged through the decades, producing leaders who have made significant contributions 
+                        to Uganda and beyond in various fields including medicine, law, engineering, and the arts.
+                    </p>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <img src="sch2.jpg" alt="School Building" class="w-full h-auto rounded-lg shadow-lg lazy-load" loading="lazy">
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md card-hover">
+                    <div class="text-4xl mb-4 school-accent">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Our Mission</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        To provide quality education that empowers students to achieve their full potential academically, socially, and morally, preparing them to be responsible citizens and leaders.
+                    </p>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md card-hover">
+                    <div class="text-4xl mb-4 school-accent">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Our Vision</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        To be a center of excellence in education, recognized nationally and internationally for developing well-rounded individuals who contribute positively to society.
+                    </p>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md card-hover">
+                    <div class="text-4xl mb-4 school-accent">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Our Values</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Integrity, Excellence, Respect, Responsibility, and Community. These core values guide our daily interactions and decision-making processes.
+                    </p>
+                </div>
+            </div>
+            
+            <h3 class="heading-font text-2xl font-bold mb-8 text-center school-accent">School Timeline</h3>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold mb-2">1985 - Foundation</h4>
+                        <p class="text-gray-600 dark:text-gray-300">Royal Crest High School was established with two classrooms and three teachers.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold mb-2">1992 - First Expansion</h4>
+                        <p class="text-gray-600 dark:text-gray-300">Added science laboratories and expanded to accommodate 200 students.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold mb-2">2001 - A-Level Introduced</h4>
+                        <p class="text-gray-600 dark:text-gray-300">Began offering Advanced Level education with three combinations.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold mb-2">2010 - National Recognition</h4>
+                        <p class="text-gray-600 dark:text-gray-300">Ranked among top 10 schools in Uganda for academic performance.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold mb-2">2020 - Digital Transformation</h4>
+                        <p class="text-gray-600 dark:text-gray-300">Implemented comprehensive digital learning infrastructure and e-learning platform.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h3 class="heading-font text-2xl font-bold mb-4 school-accent">School Anthem</h3>
+                        <p class="text-gray-600 dark:text-gray-300 italic mb-4">
+                            "Royal Crest, our noble school,<br>
+                            Where knowledge shines and wisdom rules.<br>
+                            With hearts united, strong and true,<br>
+                            We pledge our loyalty to you."
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 italic">
+                            "Through trials faced and victories won,<br>
+                            Our spirit never comes undone.<br>
+                            For excellence we strive each day,<br>
+                            Royal Crest will lead the way."
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 bg-gray-100 dark:bg-gray-700 flex items-center justify-center p-8">
+                        <img src="sch1.jpg" alt="School Crest" class="max-w-full h-auto lazy-load" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions" class="py-16 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="heading-font text-3xl font-bold text-center mb-12">Admissions</h2>
+            
+            <div class="max-w-4xl mx-auto bg-gray-100 dark:bg-gray-700 rounded-lg p-6 mb-12">
+                <h3 class="heading-font text-2xl font-bold mb-6 text-center school-accent">Admission Process</h3>
+                
+                <div class="flex flex-col md:flex-row justify-between mb-8">
+                    <div class="progress-step completed cursor-pointer" data-step="inquiry">
+                        <div class="step-number flex items-center justify-center w-10 h-10 rounded-full border-2 border-gray-300 bg-white dark:bg-gray-800 font-bold mx-auto mb-2">1</div>
+                        <p class="text-center font-medium">Inquiry</p>
+                    </div>
+                    
+                    <div class="progress-step completed cursor-pointer" data-step="application">
+                        <div class="step-number flex items-center justify-center w-10 h-10 rounded-full border-2 border-gray-300 bg-white dark:bg-gray-800 font-bold mx-auto mb-2">2</div>
+                        <p class="text-center font-medium">Application</p>
+                    </div>
+                    
+                    <div class="progress-step active cursor-pointer" data-step="shortlist">
+                        <div class="step-number flex items-center justify-center w-10 h-10 rounded-full border-2 border-gray-300 bg-white dark:bg-gray-800 font-bold mx-auto mb-2">3</div>
+                        <p class="text-center font-medium">Shortlist Successful Candidates</p>
+                    </div>
+                    
+                    <div class="progress-step cursor-pointer" data-step="admission">
+                        <div class="step-number flex items-center justify-center w-10 h-10 rounded-full border-2 border-gray-300 bg-white dark:bg-gray-800 font-bold mx-auto mb-2">4</div>
+                        <p class="text-center font-medium">Admission</p>
+                    </div>
+                </div>
+                
+                <!-- Step Information Sections -->
+                <div id="step-information" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                    <!-- Inquiry Step -->
+                    <div class="step-content" id="inquiry-content">
+                        <h4 class="font-bold mb-4 text-lg">Step 1: Inquiry</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Begin your journey with Royal Crest High School by making an inquiry. You can:
+                        </p>
+                        <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-4">
+                            <li>Visit our campus during visiting hours</li>
+                            <li>Call our admissions office at +256 700 000000</li>
+                            <li>Email us at admissions@royalcrest.ac.ug</li>
+                            <li>Fill out the inquiry form on our website</li>
+                        </ul>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            <span class="font-bold">Next Step:</span> Complete the application process
+                        </p>
+                    </div>
+
+                    <!-- Application Step -->
+                    <div class="step-content hidden" id="application-content">
+                        <h4 class="font-bold mb-4 text-lg">Step 2: Application</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Submit your application with the following documents:
+                        </p>
+                        <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-4">
+                            <li>Completed application form</li>
+                            <li>Previous school report cards</li>
+                            <li>Birth certificate</li>
+                            <li>Passport photos (2 copies)</li>
+                            <li>Medical form completed by a licensed physician</li>
+                        </ul>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            <span class="font-bold">Next Step:</span> Wait for shortlisting results
+                        </p>
+                    </div>
+
+                    <!-- Shortlist Step -->
+                    <div class="step-content hidden" id="shortlist-content">
+                        <h4 class="font-bold mb-4 text-lg">Step 3: Shortlist Successful Candidates</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Successful candidates will be shortlisted based on their application materials and academic records. 
+                            The shortlisted candidates will be notified through their provided contact information.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            <span class="font-bold">Next Step:</span> Final admission offers will be made to the shortlisted candidates
+                        </p>
+                    </div>
+
+                    <!-- Admission Step -->
+                    <div class="step-content hidden" id="admission-content">
+                        <h4 class="font-bold mb-4 text-lg">Step 4: Admission</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Upon receiving an admission offer, you will need to:
+                        </p>
+                        <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-4">
+                            <li>Accept the admission offer within the specified timeframe</li>
+                            <li>Pay the required admission fees</li>
+                            <li>Complete the registration process</li>
+                            <li>Attend the orientation program</li>
+                        </ul>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            <span class="font-bold">Welcome to Royal Crest High School!</span>
+                        </p>
+                    </div>
+                </div>
+
+                <script>
+                    // Add this to your existing JavaScript
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const steps = document.querySelectorAll('.progress-step');
+                        const stepContents = document.querySelectorAll('.step-content');
+                        
+                        steps.forEach(step => {
+                            step.addEventListener('click', function() {
+                                // Remove active class from all steps
+                                steps.forEach(s => s.classList.remove('active'));
+                                
+                                // Add active class to clicked step
+                                this.classList.add('active');
+                                
+                                // Hide all step contents
+                                stepContents.forEach(content => content.classList.add('hidden'));
+                                
+                                // Show the corresponding content
+                                const stepId = this.getAttribute('data-step');
+                                document.getElementById(`${stepId}-content`).classList.remove('hidden');
+                            });
+                        });
+                    });
+                </script>
+
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold mb-4 text-lg">Current Step: Shortlist Successful Candidates</h4>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Successful candidates will be shortlisted based on their application materials and academic records. 
+                        The shortlisted candidates will be notified through their provided contact information.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        <span class="font-bold">Next Step:</span> Final admission offers will be made to the shortlisted candidates.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div>
+                    <h3 class="heading-font text-2xl font-bold mb-6 school-accent">Requirements</h3>
+                    
+                    <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold mb-3">O-Level (S1-S4)</h4>
+                        <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-6">
+                            <li class="mb-2">Completed P7 with good grades</li>
+                            <li class="mb-2">Pass in English and Mathematics</li>
+                            <li class="mb-2">Birth certificate</li>
+                            <li class="mb-2">Previous school report cards</li>
+                            <li>Passport photos (2 copies)</li>
+                        </ul>
+                        
+                        <h4 class="font-bold mb-3">A-Level (S5-S6)</h4>
+                        <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300">
+                            <li class="mb-2">UCE certificate with at least 8 passes</li>
+                            <li class="mb-2">Minimum of credit 5 in relevant subjects</li>
+                            <li class="mb-2">Birth certificate</li>
+                            <li class="mb-2">Previous school report cards</li>
+                            <li>Passport photos (2 copies)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="heading-font text-2xl font-bold mb-6 school-accent">Download Forms</h3>
+                    
+                    <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-2">Application Form</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mb-3">Complete this form to begin your application process.</p>
+                            <a href="application form.pdf" download class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition-all duration-300 transform hover:scale-105">
+                                <i class="fas fa-download mr-2"></i> Download Form
+                            </a>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-2">Medical Form</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mb-3">Required medical information to be completed by a licensed physician.</p>
+                            <a href="medical form.pdf" download class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition-all duration-300 transform hover:scale-105">
+                                <i class="fas fa-download mr-2"></i> Download Form
+                            </a>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold mb-2">Fee Structure</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mb-3">Detailed breakdown of tuition and other school fees.</p>
+                            <a href="fees- structure.pdf" download class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition-all duration-300 transform hover:scale-105">
+                                <i class="fas fa-download mr-2"></i> Download Fees
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <h3 class="heading-font text-2xl font-bold mb-6 text-center school-accent">Frequently Asked Questions</h3>
+                
+                <div class="bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden">
+                    <div class="accordion-item border-b border-gray-200 dark:border-gray-600">
+                        <button class="accordion-header w-full text-left p-4 font-bold flex justify-between items-center hover:bg-gray-200 dark:hover:bg-gray-600 transition-all">
+                            <span>What is the application deadline?</span>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-4 pt-0 text-gray-600 dark:text-gray-300">
+                                Applications for the first intake close on March 31st each year. There is a second intake with a deadline of June 30th, subject to availability of spaces.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-b border-gray-200 dark:border-gray-600">
+                        <button class="accordion-header w-full text-left p-4 font-bold flex justify-between items-center hover:bg-gray-200 dark:hover:bg-gray-600 transition-all">
+                            <span>Are scholarships available?</span>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-4 pt-0 text-gray-600 dark:text-gray-300">
+                                Yes, we offer merit-based scholarships covering up to 100% of tuition fees for exceptional students. There are also need-based bursaries available. Scholarship applications must be submitted along with the admission application.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-b border-gray-200 dark:border-gray-600">
+                        <button class="accordion-header w-full text-left p-4 font-bold flex justify-between items-center hover:bg-gray-200 dark:hover:bg-gray-600 transition-all">
+                            <span>What are the school hours?</span>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-4 pt-0 text-gray-600 dark:text-gray-300">
+                                Regular school hours are from 8:00 AM to 4:00 PM, Monday through Friday. Boarding students have structured evening study sessions from 7:00 PM to 9:00 PM.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header w-full text-left p-4 font-bold flex justify-between items-center hover:bg-gray-200 dark:hover:bg-gray-600 transition-all">
+                            <span>Is boarding available?</span>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-4 pt-0 text-gray-600 dark:text-gray-300">
+                                Yes, we have separate boarding facilities for boys and girls. Our boarding houses provide a supportive environment with house parents, study supervision, and a range of extracurricular activities. Boarding spaces are limited and allocated on a first-come, first-served basis.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-blue-600 dark:bg-blue-800 rounded-lg shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 md:p-12 text-white">
+                        <h3 class="heading-font text-2xl font-bold mb-4">Admissions Office</h3>
+                        <p class="mb-6">
+                            For any inquiries regarding admissions, please contact our admissions office:
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-phone-alt mr-3"></i> +256 700 000000
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-envelope mr-3"></i> admissions@royalcrest.ac.ug
+                        </p>
+                        <p>
+                            <i class="fas fa-clock mr-3"></i> Mon-Fri: 8:00 AM - 5:00 PM
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 bg-blue-700 dark:bg-blue-900 p-8 md:p-12">
+                        <h3 class="heading-font text-2xl font-bold mb-4 text-white">Schedule a Visit</h3>
+                        <p class="text-blue-100 mb-6">
+                            We welcome prospective students and parents to visit our campus. Please fill out the form to schedule a tour.
+                        </p>
+                        <a href="#contact" class="inline-block bg-white text-blue-600 hover:bg-gray-100 font-medium py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105" id="bookTourBtn">
+                            Book a Tour
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour Booking Modal -->
+    <div id="tourBookingModal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm transition-opacity duration-300"></div>
+        <div class="relative min-h-screen flex items-center justify-center p-4">
+            <div id="bookingForm" class="bg-white/90 dark:bg-gray-800/90 backdrop-blur-md rounded-2xl shadow-2xl w-full max-w-2xl transform transition-all duration-500 scale-95 opacity-0">
+                <div class="p-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Book a School Tour</h3>
+                        <button id="closeBookingForm" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    
+                    <form id="tourBookingForm" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="form-group">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Full Name</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-lg bg-white/50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+                                <input type="email" required class="w-full px-4 py-3 rounded-lg bg-white/50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone Number</label>
+                                <input type="tel" required class="w-full px-4 py-3 rounded-lg bg-white/50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Preferred Date</label>
+                                <input type="date" required class="w-full px-4 py-3 rounded-lg bg-white/50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Preferred Time</label>
+                                <select required class="w-full px-4 py-3 rounded-lg bg-white/50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
+                                    <option value="">Select a time</option>
+                                    <option value="morning">Morning (9:00 AM - 11:00 AM)</option>
+                                    <option value="afternoon">Afternoon (2:00 PM - 4:00 PM)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Number of Visitors</label>
+                                <input type="number" min="1" max="10" required class="w-full px-4 py-3 rounded-lg bg-white/50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Special Requirements</label>
+                            <textarea rows="3" class="w-full px-4 py-3 rounded-lg bg-white/50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"></textarea>
+                        </div>
+                        
+                        <div class="flex justify-end space-x-4">
+                            <button type="button" id="cancelBooking" class="px-6 py-3 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-300">
+                                Cancel
+                            </button>
+                            <button type="submit" class="px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
+                                Book Tour
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add this to your existing JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('tourBookingModal');
+            const form = document.getElementById('bookingForm');
+            const bookTourBtn = document.getElementById('bookTourBtn');
+            const closeBookingForm = document.getElementById('closeBookingForm');
+            const cancelBooking = document.getElementById('cancelBooking');
+            
+            function openModal() {
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    form.classList.remove('scale-95', 'opacity-0');
+                    form.classList.add('scale-100', 'opacity-100');
+                }, 10);
+            }
+            
+            function closeModal() {
+                form.classList.remove('scale-100', 'opacity-100');
+                form.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            }
+            
+            bookTourBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal();
+            });
+            
+            closeBookingForm.addEventListener('click', closeModal);
+            cancelBooking.addEventListener('click', closeModal);
+            
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+            
+            // Form submission
+            document.getElementById('tourBookingForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Add your form submission logic here
+                alert('Tour booking request submitted successfully!');
+                closeModal();
+            });
+        });
+    </script>
+
+    <!-- Add these styles to your existing CSS -->
+    <style>
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            backdrop-filter: blur(8px);
+            color: #1a1a1a;
+        }
+
+        .dark .form-group input,
+        .dark .form-group select,
+        .dark .form-group textarea {
+            color: #ffffff;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        #bookingForm {
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .dark #bookingForm {
+            background: rgba(31, 41, 55, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .dark .form-group input,
+        .dark .form-group select,
+        .dark .form-group textarea {
+            background: rgba(55, 65, 81, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .form-group label {
+            color: #374151;
+            font-weight: 500;
+        }
+
+        .dark .form-group label {
+            color: #e5e7eb;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #9ca3af;
+        }
+
+        .dark .form-group input::placeholder,
+        .dark .form-group textarea::placeholder {
+            color: #9ca3af;
+        }
+
+        #closeBookingForm {
+            color: #4b5563;
+        }
+
+        .dark #closeBookingForm {
+            color: #d1d5db;
+        }
+
+        #closeBookingForm:hover {
+            color: #1f2937;
+        }
+
+        .dark #closeBookingForm:hover {
+            color: #f3f4f6;
+        }
+
+        #cancelBooking {
+            background: rgba(229, 231, 235, 0.9);
+            color: #374151;
+        }
+
+        .dark #cancelBooking {
+            background: rgba(55, 65, 81, 0.9);
+            color: #e5e7eb;
+        }
+
+        #cancelBooking:hover {
+            background: rgba(209, 213, 219, 0.9);
+        }
+
+        .dark #cancelBooking:hover {
+            background: rgba(75, 85, 99, 0.9);
+        }
+
+        button[type="submit"] {
+            background: rgba(37, 99, 235, 0.9);
+            color: white;
+        }
+
+        .dark button[type="submit"] {
+            background: rgba(59, 130, 246, 0.9);
+        }
+
+        button[type="submit"]:hover {
+            background: rgba(29, 78, 216, 0.9);
+        }
+
+        .dark button[type="submit"]:hover {
+            background: rgba(37, 99, 235, 0.9);
+        }
+        
+        @keyframes morph {
+            0% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
+            50% { border-radius: 30% 60% 70% 40%/50% 60% 30% 60%; }
+            100% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
+        }
+        
+        #bookingForm {
+            animation: morph 8s ease-in-out infinite;
+        }
+    </style>
+
+    <!-- Academics Section -->
+    <section id="academics" class="py-16 bg-gray-100 dark:bg-gray-700">
+        <div class="container mx-auto px-4">
+            <h2 class="heading-font text-3xl font-bold text-center mb-12">Academics</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-8 mb-16">
+                <div class="lg:w-1/2">
+                    <h3 class="heading-font text-2xl font-bold mb-4 school-accent">Our Curriculum</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        At Royal Crest High School, we offer a comprehensive and innovative curriculum that combines the Uganda National Curriculum with enhanced learning opportunities. Our program is designed to nurture intellectual curiosity, critical thinking, and practical skills essential for success in the modern world.
+                    </p>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-star text-accent-gold mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-800 dark:text-white">Academic Excellence</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Consistently achieving outstanding results with 98% of our students qualifying for university admission.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-users text-accent-gold mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-800 dark:text-white">Personalized Learning</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Small class sizes (20:1 student-teacher ratio) ensuring individual attention and tailored support.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-laptop-code text-accent-gold mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-800 dark:text-white">Digital Integration</h4>
+                                <p class="text-gray-600 dark:text-gray-300">State-of-the-art technology integration across all subjects, preparing students for the digital age.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                        <h4 class="font-bold text-xl mb-4 text-gray-800 dark:text-white">Teaching Methodology</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center mr-4">
+                                    <i class="fas fa-lightbulb text-blue-600 dark:text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-gray-800 dark:text-white">Interactive Learning</h5>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Engaging classroom activities and hands-on experiments</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center mr-4">
+                                    <i class="fas fa-project-diagram text-green-600 dark:text-green-400"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-gray-800 dark:text-white">Project-Based Learning</h5>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Real-world problem-solving and collaborative projects</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900 flex items-center justify-center mr-4">
+                                    <i class="fas fa-brain text-purple-600 dark:text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-gray-800 dark:text-white">Critical Thinking</h5>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Developing analytical and problem-solving skills</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <div class="text-4xl mb-4 school-accent">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Academic Support</h3>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Individual tutoring sessions
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Study skills workshops
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Exam preparation programs
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Academic counseling
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <div class="text-4xl mb-4 school-accent">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Laboratory Facilities</h3>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Modern science laboratories
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Computer labs with latest technology
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Research facilities
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Innovation hub
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <div class="text-4xl mb-4 school-accent">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Learning Resources</h3>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Digital library access
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Online learning platforms
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Educational software
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Research databases
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg overflow-hidden mb-12">
+                <div class="p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-4">Program Highlights</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold mb-2">Academic Achievements</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <i class="fas fa-trophy mr-2"></i>
+                                    98% University Admission Rate
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-medal mr-2"></i>
+                                    National Science Competition Winners
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-award mr-2"></i>
+                                    Outstanding UACE Results
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Special Programs</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <i class="fas fa-microscope mr-2"></i>
+                                    Advanced Science Research
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-code mr-2"></i>
+                                    Coding & Robotics Club
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-globe mr-2"></i>
+                                    International Exchange Programs
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Leadership -->
+    <section class="py-16 bg-gray-100 dark:bg-gray-700">
+        <div class="container mx-auto px-4">
+            <h2 class="heading-font text-3xl font-bold text-center mb-12">Student Leadership</h2>
+            
+            <div class="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mb-12">
+                <div class="md:flex">
+                    <div class="md:w-1/3">
+                        <img src="sch1.jpg" alt="Head Prefect" class="w-full h-full object-cover lazy-load" loading="lazy">
+                    </div>
+                    <div class="md:w-2/3 p-8">
+                        <h3 class="heading-font text-2xl font-bold mb-2">Brian Lubega</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Head Prefect - 2023/2024</p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">
+                            Brian is a senior six student in the PCM combination. As Head Prefect, he serves as the primary liaison between students 
+                            and administration. Brian has demonstrated exceptional leadership skills through organizing student forums and representing 
+                            the school in national youth leadership conferences.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="heading-font text-2xl font-bold mb-6 text-center school-accent">Prefectural Body</h3>
+            
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Existing prefects -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden card-hover">
+                    <img src="sch2.jpg" alt="Prefect" class="w-full h-48 object-cover lazy-load" loading="lazy">
+                    <div class="p-4">
+                        <h4 class="font-bold">Grace Nakimera</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Deputy Head Prefect</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">
+                            Oversees discipline and assists the Head Prefect in all duties.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden card-hover">
+                    <img src="sch1.jpg" alt="Prefect" class="w-full h-48 object-cover lazy-load" loading="lazy">
+                    <div class="p-4">
+                        <h4 class="font-bold">David Ssali</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Academic Prefect</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">
+                            Coordinates academic activities and study groups.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden card-hover">
+                    <img src="sch2.jpg" alt="Prefect" class="w-full h-48 object-cover lazy-load" loading="lazy">
+                    <div class="p-4">
+                        <h4 class="font-bold">Sarah Nansubuga</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Sports Prefect</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">
+                            Manages sports activities and inter-house competitions.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden card-hover">
+                    <img src="sch1.jpg" alt="Prefect" class="w-full h-48 object-cover lazy-load" loading="lazy">
+                    <div class="p-4">
+                        <h4 class="font-bold">Michael Kato</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Entertainment Prefect</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">
+                            Organizes cultural events and entertainment activities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hidden Student Leaders (Initially) -->
+            <div id="moreStudentLeaders" class="hidden mt-12">
+                <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden card-hover">
+                        <img src="sch2.jpg" alt="Prefect" class="w-full h-48 object-cover lazy-load" loading="lazy">
+                        <div class="p-4">
+                            <h4 class="font-bold">Patricia Namukasa</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Health Prefect</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">
+                                Ensures health and hygiene standards are maintained.
+                            </p>
+                    </div>
+                </div>
+                
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden card-hover">
+                        <img src="sch1.jpg" alt="Prefect" class="w-full h-48 object-cover lazy-load" loading="lazy">
+                        <div class="p-4">
+                            <h4 class="font-bold">Robert Muwonge</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Library Prefect</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">
+                                Manages library resources and study sessions.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden card-hover">
+                        <img src="sch2.jpg" alt="Prefect" class="w-full h-48 object-cover lazy-load" loading="lazy">
+                        <div class="p-4">
+                            <h4 class="font-bold">John Mukasa</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Discipline Prefect</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">
+                                Maintains order and enforces school rules.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden card-hover">
+                        <img src="sch1.jpg" alt="Prefect" class="w-full h-48 object-cover lazy-load" loading="lazy">
+                        <div class="p-4">
+                            <h4 class="font-bold">Mary Nakato</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Welfare Prefect</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">
+                                Addresses student welfare and accommodation issues.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button id="loadMoreLeaders" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                    View More Leaders
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add JavaScript for expandable sections -->
+    <script>
+        // Existing JavaScript code...
+
+        // Departments expand/collapse
+        const loadMoreDepartmentsBtn = document.getElementById('loadMoreDepartments');
+        const moreDepartments = document.getElementById('moreDepartments');
+        
+        loadMoreDepartmentsBtn.addEventListener('click', () => {
+            moreDepartments.classList.toggle('hidden');
+            loadMoreDepartmentsBtn.textContent = moreDepartments.classList.contains('hidden') 
+                ? 'View More Departments' 
+                : 'Show Less Departments';
+        });
+
+        // Student Leaders expand/collapse
+        const loadMoreLeadersBtn = document.getElementById('loadMoreLeaders');
+        const moreStudentLeaders = document.getElementById('moreStudentLeaders');
+        
+        loadMoreLeadersBtn.addEventListener('click', () => {
+            moreStudentLeaders.classList.toggle('hidden');
+            loadMoreLeadersBtn.textContent = moreStudentLeaders.classList.contains('hidden') 
+                ? 'View More Leaders' 
+                : 'Show Less Leaders';
+        });
+    </script>
+
+    <!-- Location Section -->
+    <section id="location" class="py-16 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="heading-font text-3xl font-bold text-center mb-12">Find Us</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+                    <h3 class="heading-font text-2xl font-bold mb-4 school-accent">Our Location</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Royal Crest High School is conveniently located in Kampala, Uganda. Our campus is easily accessible 
+                        and provides a serene environment conducive to learning.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-accent-gold"></i>
+                            <div>
+                                <h4 class="font-bold mb-1">Address</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Plot 123, Royal Crest Road<br>Kampala, Uganda</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-accent-gold"></i>
+                            <div>
+                                <h4 class="font-bold mb-1">Phone</h4>
+                                <p class="text-gray-600 dark:text-gray-300">+256 700 000000</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock mt-1 mr-3 text-accent-gold"></i>
+                            <div>
+                                <h4 class="font-bold mb-1">Visiting Hours</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 1:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="h-[400px] rounded-lg overflow-hidden shadow-lg">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7536223157963!2d32.58261461475884!3d0.3132999999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb93c5695ab7%3A0x8e277819180c40c!2sKampala%2C%20Uganda!5e0!3m2!1sen!2sus!4v1647881234567!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-16 bg-gray-100 dark:bg-gray-700">
+        <div class="container mx-auto px-4">
+            <h2 class="heading-font text-3xl font-bold text-center mb-12">Through The Lens</h2>
+            
+            <!-- Gallery Categories -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="px-4 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-800 dark:text-white hover:bg-accent-gold hover:text-white transition-all" data-category="all">All</button>
+                <button class="px-4 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-800 dark:text-white hover:bg-accent-gold hover:text-white transition-all" data-category="campus">Campus Life</button>
+                <button class="px-4 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-800 dark:text-white hover:bg-accent-gold hover:text-white transition-all" data-category="events">Events</button>
+                <button class="px-4 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-800 dark:text-white hover:bg-accent-gold hover:text-white transition-all" data-category="sports">Sports</button>
+                <button class="px-4 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-800 dark:text-white hover:bg-accent-gold hover:text-white transition-all" data-category="academics">Academics</button>
+            </div>
+            
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Campus Life -->
+                <div class="gallery-item" data-category="campus">
+                    <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                        <img src="sch1.jpg" alt="Campus Life" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="text-white">
+                                <h4 class="font-bold">Morning Assembly</h4>
+                                <p class="text-sm">Students gathering for daily assembly</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Events -->
+                <div class="gallery-item" data-category="events">
+                    <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                        <img src="sch2.jpg" alt="School Event" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="text-white">
+                                <h4 class="font-bold">Annual Sports Day</h4>
+                                <p class="text-sm">Students competing in track events</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sports -->
+                <div class="gallery-item" data-category="sports">
+                    <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                        <img src="sch1.jpg" alt="Sports" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="text-white">
+                                <h4 class="font-bold">Football Match</h4>
+                                <p class="text-sm">Inter-house football competition</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Academics -->
+                <div class="gallery-item" data-category="academics">
+                    <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                        <img src="sch2.jpg" alt="Academics" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="text-white">
+                                <h4 class="font-bold">Science Lab</h4>
+                                <p class="text-sm">Students conducting experiments</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- More Campus Life -->
+                <div class="gallery-item" data-category="campus">
+                    <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                        <img src="sch1.jpg" alt="Campus Life" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="text-white">
+                                <h4 class="font-bold">Library</h4>
+                                <p class="text-sm">Students studying in the library</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- More Events -->
+                <div class="gallery-item" data-category="events">
+                    <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                        <img src="sch2.jpg" alt="School Event" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="text-white">
+                                <h4 class="font-bold">Graduation Ceremony</h4>
+                                <p class="text-sm">Class of 2023 graduation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- More Sports -->
+                <div class="gallery-item" data-category="sports">
+                    <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                        <img src="sch1.jpg" alt="Sports" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="text-white">
+                                <h4 class="font-bold">Basketball Team</h4>
+                                <p class="text-sm">School basketball team practice</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- More Academics -->
+                <div class="gallery-item" data-category="academics">
+                    <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                        <img src="sch2.jpg" alt="Academics" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="text-white">
+                                <h4 class="font-bold">Computer Lab</h4>
+                                <p class="text-sm">Students learning programming</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hidden Gallery Items -->
+            <div id="moreGalleryItems" class="hidden mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Campus Life -->
+                <div class="gallery-item" data-category="campus">
+                    <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                        <img src="sch1.jpg" alt="Campus Life" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="text-white">
+                                <h4 class="font-bold">Dormitory Life</h4>
+                                <p class="text-sm">Boarding students in their dormitory</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Events -->
+                <div class="gallery-item" data-category="events">
+                    <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                        <img src="sch2.jpg" alt="School Event" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="text-white">
+                                <h4 class="font-bold">Cultural Day</h4>
+                                <p class="text-sm">Students performing traditional dance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sports -->
+                <div class="gallery-item" data-category="sports">
+                    <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                        <img src="sch1.jpg" alt="Sports" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="text-white">
+                                <h4 class="font-bold">Swimming Competition</h4>
+                                <p class="text-sm">Annual swimming gala</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Academics -->
+                <div class="gallery-item" data-category="academics">
+                    <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                        <img src="sch2.jpg" alt="Academics" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <div class="text-white">
+                                <h4 class="font-bold">Science Exhibition</h4>
+                                <p class="text-sm">Students showcasing their projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View More Button -->
+            <div class="text-center mt-12">
+                <button id="viewMorePhotosBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                    View More Photos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Gallery JavaScript -->
+    <script>
+        // Gallery Filtering
+        document.querySelectorAll('[data-category]').forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.getAttribute('data-category');
+                
+                // Update active button
+                document.querySelectorAll('[data-category]').forEach(btn => {
+                    btn.classList.remove('bg-accent-gold', 'text-white');
+                });
+                button.classList.add('bg-accent-gold', 'text-white');
+                
+                // Filter gallery items
+                document.querySelectorAll('.gallery-item').forEach(item => {
+                    if (category === 'all' || item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Gallery View More Functionality
+        const viewMorePhotosBtn = document.getElementById('viewMorePhotosBtn');
+        const moreGalleryItems = document.getElementById('moreGalleryItems');
+        
+        viewMorePhotosBtn.addEventListener('click', () => {
+            moreGalleryItems.classList.toggle('hidden');
+            viewMorePhotosBtn.textContent = moreGalleryItems.classList.contains('hidden') 
+                ? 'View More Photos' 
+                : 'Show Less Photos';
+            
+            // Smooth scroll to the newly revealed content
+            if (!moreGalleryItems.classList.contains('hidden')) {
+                moreGalleryItems.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        });
+    </script>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- School Info -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <img src="sch_logo-removebg.png" alt="School Crest" class="h-24 mr-4">
+                        <div>
+                            <h3 class="heading-font text-3xl font-bold school-accent">ROYAL CREST</h3>
+                            <p class="text-lg">HIGH SCHOOL</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Providing quality education and shaping future leaders since 1985. Our commitment to excellence in academics, sports, and character development sets us apart.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 school-accent">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#admissions" class="text-gray-400 hover:text-white transition-colors">Admissions</a></li>
+                        <li><a href="#academics" class="text-gray-400 hover:text-white transition-colors">Academics</a></li>
+                        <li><a href="#academic-departments" class="text-gray-400 hover:text-white transition-colors">Departments</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 school-accent">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">Plot 123, Royal Crest Road<br>Kampala, Uganda</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">+256 700 000000</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">info@royalcrest.ac.ug</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">Mon-Fri: 8:00 AM - 5:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 school-accent">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for updates and announcements.</p>
+                    <form class="space-y-3">
+                        <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-accent-gold">
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        © 2024 Royal Crest High School. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add JavaScript optimizations -->
+    <script>
+        // Lazy loading images
+        document.addEventListener("DOMContentLoaded", function() {
+            const lazyImages = document.querySelectorAll(".lazy-load");
+            
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.classList.add("loaded");
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => imageObserver.observe(img));
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById("mobileMenuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+        
+        mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById("darkModeToggle");
+        const mobileDarkModeToggle = document.getElementById("mobileDarkModeToggle");
+        const darkModeIcon = document.getElementById("darkModeIcon");
+        const mobileDarkModeIcon = document.getElementById("mobileDarkModeIcon");
+        const body = document.body;
+        
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            darkModeIcon.classList.remove('fa-moon');
+            darkModeIcon.classList.add('fa-sun');
+            mobileDarkModeIcon.classList.remove('fa-moon');
+            mobileDarkModeIcon.classList.add('fa-sun');
+        }
+        
+        function toggleDarkMode() {
+            // Add rotation animation
+            darkModeIcon.classList.add('dark-mode-toggle-rotate');
+            mobileDarkModeIcon.classList.add('dark-mode-toggle-rotate');
+            
+            // Toggle dark mode
+            body.classList.toggle("dark-mode");
+            
+            // Toggle icon
+            darkModeIcon.classList.toggle("fa-moon");
+            darkModeIcon.classList.toggle("fa-sun");
+            mobileDarkModeIcon.classList.toggle("fa-moon");
+            mobileDarkModeIcon.classList.toggle("fa-sun");
+            
+            // Save theme preference
+            const isDarkMode = body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+            
+            // Remove rotation animation class after animation completes
+            setTimeout(() => {
+                darkModeIcon.classList.remove('dark-mode-toggle-rotate');
+                mobileDarkModeIcon.classList.remove('dark-mode-toggle-rotate');
+            }, 500);
+        }
+        
+        darkModeToggle.addEventListener("click", toggleDarkMode);
+        mobileDarkModeToggle.addEventListener("click", toggleDarkMode);
+
+        // Add dark mode transition class to all elements that need it
+        document.querySelectorAll('.bg-white, .text-gray-800, .bg-gray-100, .border-gray-200, .shadow-md').forEach(element => {
+            element.classList.add('dark-mode-transition');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('active');
+                icon.style.transform = content.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0)';
+            });
+        });
+
+        // News Section Toggle
+        const viewAllNewsBtn = document.getElementById('viewAllNewsBtn');
+        const moreNews = document.getElementById('moreNews');
+        
+        viewAllNewsBtn.addEventListener('click', () => {
+            moreNews.classList.toggle('hidden');
+            viewAllNewsBtn.textContent = moreNews.classList.contains('hidden') 
+                ? 'View All News' 
+                : 'Show Less News';
+            
+            // Smooth scroll to the newly revealed content
+            if (!moreNews.classList.contains('hidden')) {
+                moreNews.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        });
+    </script>
+
+    <!-- Add JavaScript for smooth scrolling -->
+    <script>
+        // ... existing JavaScript code ...
+
+        // Enhanced smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', () => {
+                const targetId = anchor.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Add offset for fixed header
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Update active state in navigation
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('school-accent');
+                        if (link.getAttribute('href') === targetId) {
+                            link.classList.add('school-accent');
+                        }
+                    });
+
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobileMenu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
